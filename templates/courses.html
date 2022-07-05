@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %} Recommended system {% endblock %}
+{% block content %}
+	<p>{{msg}}</p>
+	{% for course in courses_list %}
+		{% for value in course.items() %}
+			<p>{{value}}</p>
+		{% endfor %}
+	{% endfor %}
+{% endblock %}
