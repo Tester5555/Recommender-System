@@ -3,8 +3,6 @@
 {% block content %}
 	<p>{{msg}}</p>
 	{% for course in courses_list %}
-		{% for value in course.items() %}
-			<p>{{value}}</p>
-		{% endfor %}
+		<ul><li><a href="{{course['url']}}">{{course['name']}}</a></li></ul>
 	{% endfor %}
 {% endblock %}
